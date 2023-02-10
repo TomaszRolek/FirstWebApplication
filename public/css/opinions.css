@@ -45,7 +45,7 @@ main {
     background: transparent linear-gradient(114.56deg, #8A472F 10.16%, #2F4858 69.03%);
 }
 
-ul {
+ul.opinion_item {
     list-style-type: none;
     color: #FFFFFF;
     height: 90%;
@@ -53,11 +53,11 @@ ul {
     margin-bottom: 2rem;
 }
 
-li {
+li.opinion_list {
     margin-bottom: 30px;
 }
 
-a {
+a.opinion_description {
     text-decoration: none;
     display: inline-block;
     color: black;

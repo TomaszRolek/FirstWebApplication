@@ -6,16 +6,11 @@
 </head>
 <body>
 <div class="base-container">
-    <header>
-        <div class="profile">
-            <i class="fa-solid fa-user"></i>
-        </div>
-        <div class="logout">
-            Log out
-        </div>
-    </header>
+    <?php
+    include('top_bar.php');
+    ?>
     <main class="add_opinion">
-        <form action="../addOpinion" method="POST">
+        <form class="login" action="../addOpinion" method="POST">
             <?php
             if(isset($messages)){
                 foreach($messages as $message) {

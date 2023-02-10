@@ -13,7 +13,7 @@
         </div>
     </div>
     <div class="login-container">
-        <form action="register" method="POST", style="height: 60vh">
+        <form class="login" action="register" method="POST", style="height: 80vh">
             <div class="messages">
                 <?php
                 if(isset($messages)){

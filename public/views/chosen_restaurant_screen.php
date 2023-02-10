@@ -6,14 +6,9 @@
 </head>
 <body>
 <div class="base-container">
-    <header>
-        <div class="profile">
-            <i class="fa-solid fa-user"></i>
-        </div>
-        <div class="logout">
-            Log out
-        </div>
-    </header>
+    <?php
+    include('top_bar.php');
+    ?>
     <main>
         <section class="selected_restaurant">
             <div class ="white_text" style="font-size: 32px"><?= $restaurantDetails->getName(); ?></div>

@@ -6,14 +6,9 @@
 </head>
 <body>
     <div class="base-container">
-        <header>
-            <div class="profile">
-                <i class="fa-solid fa-user"></i>
-            </div>
-            <form action="logout" method="POST">
-                <button type="submit">Log out</button>
-            </form>
-        </header>
+        <?php
+        include('top_bar.php');
+        ?>
         <main>
             <section class="chosen_restaurant">
                 <div class ="centered-element">

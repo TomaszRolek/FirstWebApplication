@@ -55,14 +55,6 @@ class SecurityController extends AppController
 
         $this->sessionRepository->startSession($cookieValue);
 
-//        $userCookie = 'id_role';
-//        $cookieValue = $user->getIdRole();
-//        setcookie($userCookie, $cookieValue, time() + (60 * 30), "/");
-//
-//        if ($user->getIdRole() === 2) {
-//            header("Location: {$url}/admin_dashboard");
-//            return;
-//        }
 
         $url = "http://$_SERVER[HTTP_HOST]";
         header("Location: {$url}/dashboard");
@@ -89,7 +81,6 @@ class SecurityController extends AppController
             return $this->render('register', ['messages' => ['Please provide proper password']]);
         }
 
-        //TODO try to use better hash function
         $user = new User($email, sha1($password), $name, $surname);
 
         $this->userRepository->addUser($user);
@@ -100,7 +91,6 @@ class SecurityController extends AppController
     public function logout()
     {
         setcookie('id_user', $_COOKIE['id_user'], time() - 10, "/");
-//        setcookie('id_role', $_COOKIE['id_role'], time() - 10, "/");
         $this->sessionRepository->endSession($_COOKIE["id_user"]);
 
         return $this->render('login');
